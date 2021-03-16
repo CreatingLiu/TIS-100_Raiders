@@ -1,6 +1,8 @@
 # TIS-100_Raiders
 
-目前仅基础关部分，解法基本都是自己设计，个别谜题参考了网上其它人的答案，因此数据并不优秀，仅可完成关卡目标
+解法基本都是自己设计，个别谜题参考了网上其它人的答案，而且没有优化，因此数据并不优秀，仅可完成关卡目标
+
+剧情部分翻译暂不完整
 
 ## SELF-TEST DIAGNOSTIC(自检诊断)(00150)
 
@@ -209,4 +211,138 @@
 | CYCLE | NODE | INSTRUCTION |
 | ----- | ---- | ----------- |
 | 385   | 4    | 14          |
+
+## INTERRUPT HANDLER(中断处理程序)(33762)
+
+### 目标
+
+![image-20210316202934138](README.assets/image-20210316202934138.png)
+
+- 从IN.1到IN.4读入数据
+- 当值从0变为1时写入对应的输入号
+- 两个中断永远不会在同一个输入周期发生
+
+### 剧情
+
+![image-20210316203057835](README.assets/image-20210316203057835.png)
+
+### 解法
+
+![image-20210316203210512](README.assets/image-20210316203210512.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 671   | 9    | 62          |
+
+## SIGNAL PATTERN DETECTOR(信号模式检测器)(40196)
+
+### 目标
+
+![image-20210316203401598](README.assets/image-20210316203401598.png)
+
+- 从IN读入一个值
+- 寻找序列0,0,0
+- 找到序列时输出1
+- 如果没有，输出0
+
+### 剧情
+
+![image-20210316203605758](README.assets/image-20210316203605758.png)
+
+### 解法
+
+![image-20210316204457512](README.assets/image-20210316204457512.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 336   | 4    | 18          |
+
+## SEQUENCE REVERSER(倒序器)(42656)
+
+### 目标
+
+![image-20210316205226668](README.assets/image-20210316205226668.png)
+
+- 序列使用0结束
+- 从IN读入一个序列
+- 将序列倒序
+- 向OUT写入序列
+
+### 剧情
+
+![image-20210316205318062](README.assets/image-20210316205318062.png)
+
+### 解法
+
+![image-20210316205422596](README.assets/image-20210316205422596.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 501   | 4    | 26          |
+
+## SIGNAL MULTIPLIER(信号乘法器)(43786)
+
+### 目标
+
+![image-20210316205610967](README.assets/image-20210316205610967.png)
+
+- 从IN.A和IN.B读入数据
+- 两值相乘
+- 向OUT写入结果
+
+### 剧情
+
+![image-20210316205654780](README.assets/image-20210316205654780.png)
+
+### 解法
+
+![image-20210316205758912](README.assets/image-20210316205758912.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 5244  | 6    | 45          |
+
+## IMAGE TEST PATTERN 1(图像测试样式1)(50370)
+
+### 目标
+
+![image-20210316210045504](README.assets/image-20210316210045504.png)
+
+- 使用指定的目标测试样式填充图像缓冲区
+
+![image-20210316210240486](README.assets/image-20210316210240486.png)
+
+### 剧情
+
+![image-20210316210257798](README.assets/image-20210316210257798.png)
+
+### 解法
+
+![image-20210316210355303](README.assets/image-20210316210355303.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 2320  | 2    | 14          |
+
+## IMAGE TEST PATTERN 2(图像测试样式2)(51781)
+
+### 目标
+
+![image-20210316210045504](README.assets/image-20210316210045504.png)
+
+- 使用指定的目标测试样式填充图像缓冲区
+
+![image-20210316210707648](README.assets/image-20210316210707648.png)
+
+### 剧情
+
+![image-20210316210719335](README.assets/image-20210316210719335.png)
+
+### 解法
+
+![image-20210316210552919](README.assets/image-20210316210552919.png)
+
+| CYCLE | NODE | INSTRUCTION |
+| ----- | ---- | ----------- |
+| 1820  | 2    | 21          |
 
